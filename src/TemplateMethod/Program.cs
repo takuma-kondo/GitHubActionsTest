@@ -10,6 +10,8 @@ namespace TemplateMethod
     {
         static void Main(string[] args)
         {
+            Tranlator tranlator = new LowerAsUtf8Translator();
+            tranlator.WordTranlator();
         }
     }
 }

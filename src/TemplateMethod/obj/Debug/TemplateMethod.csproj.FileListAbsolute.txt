@@ -1,0 +1,8 @@
+C:\Git\GitHubActionsTest\src\TemplateMethod\bin\Debug\TemplateMethod.exe.config
+C:\Git\GitHubActionsTest\src\TemplateMethod\bin\Debug\TemplateMethod.exe
+C:\Git\GitHubActionsTest\src\TemplateMethod\bin\Debug\TemplateMethod.pdb
+C:\Git\GitHubActionsTest\src\TemplateMethod\obj\Debug\TemplateMethod.csproj.AssemblyReference.cache
+C:\Git\GitHubActionsTest\src\TemplateMethod\obj\Debug\TemplateMethod.csproj.SuggestedBindingRedirects.cache
+C:\Git\GitHubActionsTest\src\TemplateMethod\obj\Debug\TemplateMethod.csproj.CoreCompileInputs.cache
+C:\Git\GitHubActionsTest\src\TemplateMethod\obj\Debug\TemplateMethod.exe
+C:\Git\GitHubActionsTest\src\TemplateMethod\obj\Debug\TemplateMethod.pdb

@@ -1,0 +1,19 @@
+name: Deploy
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Notify deployment
+        uses: 8398a7/action-slack@v3.8.0
+        with:
+          status: ${{ job.status }}
+        env:
+          GITHUB_TOKEN: ${{ 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 }}
+          SLACK_WEBHOOK_URL: ${{ https://hooks.slack.com/services/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 }}
+        if: always()
