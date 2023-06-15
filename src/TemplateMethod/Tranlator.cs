@@ -1,10 +1,13 @@
 ﻿using System.IO;
+using System.Text;
 
 namespace TemplateMethod
 {
     public abstract class Tranlator
     {
         public string InputWord { get; set; }
+
+        public Encoding Encode { get; set; }
 
         protected void Input()
         {
@@ -18,7 +21,13 @@ namespace TemplateMethod
 
         protected abstract void WordChange();
 
-        protected abstract void Output();
+        protected void Output()
+        {
+            var write = new StreamWriter(@"C:\Users\10042000563\OneDrive - DENSO\デスクトップ\test1.txt", false, Encode);
+            write.WriteLine(InputWord);
+            write.Close();
+            write.Dispose();
+        }
 
         public void WordTranlator()
         {
