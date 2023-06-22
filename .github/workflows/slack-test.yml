@@ -1,6 +1,8 @@
 name: PullRequest_Confirm
 on:
-　push:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 jobs:
   test-message:
