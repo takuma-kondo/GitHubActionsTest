@@ -1,0 +1,8 @@
+C:\Git\GitHubActionsTest\src\ProtoType\bin\Debug\ProtoType.exe.config
+C:\Git\GitHubActionsTest\src\ProtoType\bin\Debug\ProtoType.exe
+C:\Git\GitHubActionsTest\src\ProtoType\bin\Debug\ProtoType.pdb
+C:\Git\GitHubActionsTest\src\ProtoType\obj\Debug\ProtoType.csproj.AssemblyReference.cache
+C:\Git\GitHubActionsTest\src\ProtoType\obj\Debug\ProtoType.csproj.SuggestedBindingRedirects.cache
+C:\Git\GitHubActionsTest\src\ProtoType\obj\Debug\ProtoType.csproj.CoreCompileInputs.cache
+C:\Git\GitHubActionsTest\src\ProtoType\obj\Debug\ProtoType.exe
+C:\Git\GitHubActionsTest\src\ProtoType\obj\Debug\ProtoType.pdb
