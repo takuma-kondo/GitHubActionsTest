@@ -11,12 +11,6 @@ jobs:
     timeout-minutes: 2
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/github-script@v6
-      env:
-       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-       URL: ${{ github.event.pull_request.html_url }}
-    - id : inform_pull_request_info
-         script | 
     - uses: slackapi/slack-github-action@v1.16.0
       with:
         payload: "{\"text\":\"${URL}\"}"
