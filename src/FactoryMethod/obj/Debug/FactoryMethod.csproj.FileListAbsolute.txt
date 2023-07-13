@@ -1,0 +1,8 @@
+C:\Git\GitHubActionsTest\src\FactoryMethod\bin\Debug\FactoryMethod.exe.config
+C:\Git\GitHubActionsTest\src\FactoryMethod\bin\Debug\FactoryMethod.exe
+C:\Git\GitHubActionsTest\src\FactoryMethod\bin\Debug\FactoryMethod.pdb
+C:\Git\GitHubActionsTest\src\FactoryMethod\obj\Debug\FactoryMethod.csproj.AssemblyReference.cache
+C:\Git\GitHubActionsTest\src\FactoryMethod\obj\Debug\FactoryMethod.csproj.SuggestedBindingRedirects.cache
+C:\Git\GitHubActionsTest\src\FactoryMethod\obj\Debug\FactoryMethod.csproj.CoreCompileInputs.cache
+C:\Git\GitHubActionsTest\src\FactoryMethod\obj\Debug\FactoryMethod.exe
+C:\Git\GitHubActionsTest\src\FactoryMethod\obj\Debug\FactoryMethod.pdb

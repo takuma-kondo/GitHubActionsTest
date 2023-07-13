@@ -1,0 +1,15 @@
+C:\Git\GitHubActionsTest\src\Singleton\bin\Debug\net6.0\Singleton.exe
+C:\Git\GitHubActionsTest\src\Singleton\bin\Debug\net6.0\Singleton.deps.json
+C:\Git\GitHubActionsTest\src\Singleton\bin\Debug\net6.0\Singleton.runtimeconfig.json
+C:\Git\GitHubActionsTest\src\Singleton\bin\Debug\net6.0\Singleton.dll
+C:\Git\GitHubActionsTest\src\Singleton\bin\Debug\net6.0\Singleton.pdb
+C:\Git\GitHubActionsTest\src\Singleton\obj\Debug\net6.0\Singleton.csproj.AssemblyReference.cache
+C:\Git\GitHubActionsTest\src\Singleton\obj\Debug\net6.0\Singleton.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\GitHubActionsTest\src\Singleton\obj\Debug\net6.0\Singleton.AssemblyInfoInputs.cache
+C:\Git\GitHubActionsTest\src\Singleton\obj\Debug\net6.0\Singleton.AssemblyInfo.cs
+C:\Git\GitHubActionsTest\src\Singleton\obj\Debug\net6.0\Singleton.csproj.CoreCompileInputs.cache
+C:\Git\GitHubActionsTest\src\Singleton\obj\Debug\net6.0\Singleton.dll
+C:\Git\GitHubActionsTest\src\Singleton\obj\Debug\net6.0\refint\Singleton.dll
+C:\Git\GitHubActionsTest\src\Singleton\obj\Debug\net6.0\Singleton.pdb
+C:\Git\GitHubActionsTest\src\Singleton\obj\Debug\net6.0\Singleton.genruntimeconfig.cache
+C:\Git\GitHubActionsTest\src\Singleton\obj\Debug\net6.0\ref\Singleton.dll

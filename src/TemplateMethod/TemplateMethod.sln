@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMethod", "TemplateM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod", "..\FactoryMethod\FactoryMethod.csproj", "{25EB5811-B351-47DB-9347-8BDB3309A945}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "..\Singleton\Singleton.csproj", "{4F02348B-B888-4519-AF81-E1287F3CC10B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Singleton", "..\Singleton\Singleton.csproj", "{4F02348B-B888-4519-AF81-E1287F3CC10B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtoType", "..\ProtoType\ProtoType.csproj", "{3B2702F3-E49A-460F-83E2-B14C0BD2DBA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{4F02348B-B888-4519-AF81-E1287F3CC10B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F02348B-B888-4519-AF81-E1287F3CC10B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F02348B-B888-4519-AF81-E1287F3CC10B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B2702F3-E49A-460F-83E2-B14C0BD2DBA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B2702F3-E49A-460F-83E2-B14C0BD2DBA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B2702F3-E49A-460F-83E2-B14C0BD2DBA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B2702F3-E49A-460F-83E2-B14C0BD2DBA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
