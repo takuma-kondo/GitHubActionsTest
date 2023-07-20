@@ -11,8 +11,16 @@ jobs:
     timeout-minutes: 2
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/github-script@v6
+      id: pr_info
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+            let pull_request_url = "${{ github.event.pull_request.html_url }}"
+            let pull_request_reviewers = ${{ toJson(github.event.pull_request.reviewers) }}"
+            let pull_request_assignees = ${{ toJson(github.event.pull_request.assignees) }}"
     - uses: slackapi/slack-github-action@v1.16.0
       with:
-        payload: "{\"text\":\"${{ github.event.pull_request.html_url }}\"}"
+        payload: "{\"text\":\"Pull Request URL: ${{ steps.pr_info.outputs.pull_request_url }}\\nReviewers: ${{ steps.pr_info.outputs.pull_request_reviewers }}\\nAssignees: ${{ steps.pr_info.outputs.pull_request_assignees }}\"}"
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
