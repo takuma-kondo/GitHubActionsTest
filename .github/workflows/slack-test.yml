@@ -17,10 +17,8 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
             let pull_request_url = "${{ github.event.pull_request.html_url }}"
-            let pull_request_reviewers = ${{ toJson(github.event.pull_request.reviewers) }}"
-            let pull_request_assignees = ${{ toJson(github.event.pull_request.assignees) }}"
     - uses: slackapi/slack-github-action@v1.16.0
       with:
-        payload: "{\"text\":\"Pull Request URL: ${{ steps.pr_info.outputs.pull_request_url }}\\nReviewers: ${{ steps.pr_info.outputs.pull_request_reviewers }}\\nAssignees: ${{ steps.pr_info.outputs.pull_request_assignees }}\"}"
+        payload: "{\"text\":\"Pull Request URL: ${{ steps.pr_info.outputs.pull_request_url }}\"}"
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
