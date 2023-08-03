@@ -13,6 +13,10 @@ jobs:
     steps:
     - uses: slackapi/slack-github-action@v1.16.0
       with:
-        payload: "{\"text\":\"Pull Request URL: ${{ toJson(github.event.pull_request.assignees) }}\"}"
+        payload: "{\"text\":\"Pull Request Details:\\n
+         Assignees: ${{ toJson(github.event.pull_request.assignees) }}\\n 
+         Reviewers: ${{ toJson(github.event.pull_request.requested_reviewers) }}\\n 
+         URL: ${{ github.event.pull_request.html_url }}\"}"
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
