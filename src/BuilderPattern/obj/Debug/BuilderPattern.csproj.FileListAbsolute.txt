@@ -1,0 +1,8 @@
+C:\Git\GitHubActionsTest\src\BuilderPattern\bin\Debug\BuilderPattern.exe.config
+C:\Git\GitHubActionsTest\src\BuilderPattern\bin\Debug\BuilderPattern.exe
+C:\Git\GitHubActionsTest\src\BuilderPattern\bin\Debug\BuilderPattern.pdb
+C:\Git\GitHubActionsTest\src\BuilderPattern\obj\Debug\BuilderPattern.csproj.AssemblyReference.cache
+C:\Git\GitHubActionsTest\src\BuilderPattern\obj\Debug\BuilderPattern.csproj.SuggestedBindingRedirects.cache
+C:\Git\GitHubActionsTest\src\BuilderPattern\obj\Debug\BuilderPattern.csproj.CoreCompileInputs.cache
+C:\Git\GitHubActionsTest\src\BuilderPattern\obj\Debug\BuilderPattern.exe
+C:\Git\GitHubActionsTest\src\BuilderPattern\obj\Debug\BuilderPattern.pdb
