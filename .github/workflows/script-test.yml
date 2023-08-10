@@ -7,7 +7,7 @@ on:
       - opened
   workflow_dispatch:
 jobs:
-  script-message:
+  script-summary:
     timeout-minutes: 2
     runs-on: ubuntu-latest
     steps:
@@ -46,22 +46,22 @@ jobs:
 
               const requestedReviewers = requestedReviewersResponse.data.users.map(reviewer => reviewer.login);
 
-              let message = `新しいプルリクエストが作成されました！\n\n`;
-              message += `タイトル: ${pullTitle}\n`;
-              message += `作成者: ${pullAuthor}\n`;
-              message += `URL: ${pullUrl}\n`;
+              let summary = `新しいプルリクエストが作成されました！\n\n`;
+              summary += `タイトル: ${pullTitle}\n`;
+              summary += `作成者: ${pullAuthor}\n`;
+              summary += `URL: ${pullUrl}\n`;
               if (assignees.length > 0) {
-                message += `割り当てられたユーザー: ${assignees.join(', ')}\n`;
+                summary += `割り当てられたユーザー: ${assignees.join(', ')}\n`;
               }
               if (requestedReviewers.length > 0) {
-                message += `レビュアー: ${requestedReviewers.join(', ')}\n`;
+                summary += `レビュアー: ${requestedReviewers.join(', ')}\n`;
               }
 
-              core.setOutput('value', message);
+              core.setOutput('value', summary);
 
               await core.summary
                 .addHeading('New Pull Request Created')
-                .addText(message)
+                .addText(summary)
                 .write();
             }
 
