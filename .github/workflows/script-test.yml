@@ -7,7 +7,7 @@ on:
       - opened
   workflow_dispatch:
 jobs:
-  test-message:
+  send-message:
     timeout-minutes: 2
     runs-on: ubuntu-latest
     steps:
@@ -21,12 +21,6 @@ jobs:
               const pullTitle = pullRequest.title;
               const pullUrl = pullRequest.html_url;
               const pullAuthor = pullRequest.user.login;
-
-              const assigneesResponse = await github.rest.issues.listAssignees({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: pullNumber
-              });
 
                 // プルリクエストの詳細情報を取得
               const pullRequestResponse = await github.rest.pulls.get({
