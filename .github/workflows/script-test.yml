@@ -7,7 +7,7 @@ on:
       - opened
   workflow_dispatch:
 jobs:
-  test-message:
+  script-message:
     timeout-minutes: 2
     runs-on: ubuntu-latest
     steps:
