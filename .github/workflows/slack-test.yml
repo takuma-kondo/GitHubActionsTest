@@ -11,11 +11,6 @@ jobs:
     timeout-minutes: 2
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/github-script@v6
-      id: conflict_pull_requests
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        script: |
     - uses: slackapi/slack-github-action@v1.16.0
       with:
         payload: "{\"text\":\"Pull Request Details:\\n
