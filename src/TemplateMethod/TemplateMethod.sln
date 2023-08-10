@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtoType", "..\ProtoType\P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderPattern", "..\BuilderPattern\BuilderPattern.csproj", "{4045834D-0FB2-4F12-A377-6B22A1289DA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstructFactory", "..\AbstructFactory\AbstructFactory.csproj", "{846E5582-ECF2-4166-99CE-0A454904FCBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4045834D-0FB2-4F12-A377-6B22A1289DA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4045834D-0FB2-4F12-A377-6B22A1289DA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4045834D-0FB2-4F12-A377-6B22A1289DA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{846E5582-ECF2-4166-99CE-0A454904FCBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{846E5582-ECF2-4166-99CE-0A454904FCBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{846E5582-ECF2-4166-99CE-0A454904FCBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{846E5582-ECF2-4166-99CE-0A454904FCBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

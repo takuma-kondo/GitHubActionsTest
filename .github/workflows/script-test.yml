@@ -1,0 +1,77 @@
+name: PullRequest_Confirm
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+  workflow_dispatch:
+jobs:
+  test-message:
+    timeout-minutes: 2
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/github-script@v6
+      id: send_info_pull_requests
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+            const pullRequest = context.payload.pull_request;
+            if (pullRequest) {
+              const pullTitle = pullRequest.title;
+              const pullUrl = pullRequest.html_url;
+              const pullAuthor = pullRequest.user.login;
+
+              const assigneesResponse = await github.rest.issues.listAssignees({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pullNumber
+              });
+
+                // プルリクエストの詳細情報を取得
+              const pullRequestResponse = await github.rest.pulls.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pullNumber
+              });
+
+              const assigneesResponse = await github.rest.issues.listAssignees({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pullNumber
+              });
+
+              const assignees = assigneesResponse.data.map(assignee => assignee.login);
+
+              const requestedReviewersResponse = await github.rest.pulls.listRequestedReviewers({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: pullNumber
+              });
+
+              const requestedReviewers = requestedReviewersResponse.data.users.map(reviewer => reviewer.login);
+
+              let message = `新しいプルリクエストが作成されました！\n\n`;
+              message += `タイトル: ${pullTitle}\n`;
+              message += `作成者: ${pullAuthor}\n`;
+              message += `URL: ${pullUrl}\n`;
+              if (assignees.length > 0) {
+                message += `割り当てられたユーザー: ${assignees.join(', ')}\n`;
+              }
+              if (requestedReviewers.length > 0) {
+                message += `レビュアー: ${requestedReviewers.join(', ')}\n`;
+              }
+
+              core.setOutput('value', message);
+
+              await core.summary
+                .addHeading('New Pull Request Created')
+                .addText(message)
+                .write();
+            }
+
+    - uses: slackapi/slack-github-action@v1.16.0
+      with:
+        payload: "{\"text\":\"${{ steps.send_info_pull_requests.outputs.value }}\"}"
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
