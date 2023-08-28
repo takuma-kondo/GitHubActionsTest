@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderPattern", "..\Builde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstructFactory", "..\AbstructFactory\AbstructFactory.csproj", "{846E5582-ECF2-4166-99CE-0A454904FCBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BridgePattern", "..\BridgePattern\BridgePattern.csproj", "{787AA374-5631-4EC7-86D6-A32F575D1D33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{846E5582-ECF2-4166-99CE-0A454904FCBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{846E5582-ECF2-4166-99CE-0A454904FCBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{846E5582-ECF2-4166-99CE-0A454904FCBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{787AA374-5631-4EC7-86D6-A32F575D1D33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{787AA374-5631-4EC7-86D6-A32F575D1D33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{787AA374-5631-4EC7-86D6-A32F575D1D33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{787AA374-5631-4EC7-86D6-A32F575D1D33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

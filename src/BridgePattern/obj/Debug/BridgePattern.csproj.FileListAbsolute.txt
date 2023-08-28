@@ -1,0 +1,8 @@
+C:\Git\GitHubActionsTest\src\BridgePattern\bin\Debug\BridgePattern.exe.config
+C:\Git\GitHubActionsTest\src\BridgePattern\bin\Debug\BridgePattern.exe
+C:\Git\GitHubActionsTest\src\BridgePattern\bin\Debug\BridgePattern.pdb
+C:\Git\GitHubActionsTest\src\BridgePattern\obj\Debug\BridgePattern.csproj.AssemblyReference.cache
+C:\Git\GitHubActionsTest\src\BridgePattern\obj\Debug\BridgePattern.csproj.SuggestedBindingRedirects.cache
+C:\Git\GitHubActionsTest\src\BridgePattern\obj\Debug\BridgePattern.csproj.CoreCompileInputs.cache
+C:\Git\GitHubActionsTest\src\BridgePattern\obj\Debug\BridgePattern.exe
+C:\Git\GitHubActionsTest\src\BridgePattern\obj\Debug\BridgePattern.pdb
