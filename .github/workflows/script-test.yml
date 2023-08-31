@@ -3,8 +3,6 @@ on:
   pull_request:
     branches:
       - main
-    types:
-      - opened
   workflow_dispatch:
 jobs:
   script-summary:
@@ -16,41 +14,34 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-              // プルリクエストの詳細情報を取得
-                const pull_request = await github.rest.pull.get({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                });
+              const url = github.event.pull_request.html_url;
+              const title = github.event.pull_request.title;
+              const assignees = github.event.pull_request.assignees;
+              const assign = JSON.stringify(assignees)
+              const requested_reviewers = github.event.pull_request.requested_reviewers;
+              const reviewers = JSON.stringify(reviewers)
+              const mergeable = github.event.pull_request.mergeable;
 
-              const assigneesResponse = await github.rest.issue.listAssignees({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: pull_request.number
-              });
-
-              // 割り当てされたユーザー(担当者)を取得
-              const assignees = assigneesResponse.data.map(assignee => assignee.login);
-              const assigneesString = assignees.join(', ');
-
-              let summary = "";
-              summary += "<!channel>\\n";
-              summary += " github.event.pull_request.title\\n";
-              summary += "github.event.pull_request.html_url\\n";
-              summary += "assigneesString\\n";
-
-
-              core.setOutput('value', '<!here>\\n' + '以下のプルリクエストが作成されました\\n' + 
-              'Title    : ' + github.event.pull_request.title + '\\n' +
-              'URL      : ' + github.event.pull_request.html_url + '\\n' +
-              'Author   : ' + assigneesString + '\\n' );　
-             
-              await core.summary
-                .addHeading('New Pull Request Created')
-                .addRaw(summary)
-                .write();
+              if(mergerable)
+              {
+                let summary = "";
+                summary += URL;
+                summary += Title + "\\n";
+                summary += assign + "\\n";
+                summary += reviewers + "\\n";
+                
+                core.setOutput('value', '<!here>\\n' + '以下のプルリクエストが作成されました\\n' + 
+                'Title    : ' + title + '\\n' +
+                'URL      : ' + url + '\\n' +
+                'Author   : ' + assignees + '\\n' );　
+              
+                await core.summary
+                  .addHeading('New Pull Request Created')
+                  .addRaw(summary)
+                  .write();
+              }
             }
     - uses: slackapi/slack-github-action@v1.16.0
-      if: steps.conflict_pull_requests.outputs.value != ''
       with:
         payload: "{\"text\":\"${{ steps.send_info_pull_requests.outputs.value }}\"}"
       env:
