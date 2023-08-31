@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: slackapi/slack-github-action@v1.16.0
       with:
-        payload: "{\"text\":\"${{ <!here>}} + 以下のプルリクエストが作成されました。:\\n
+        payload: "{\"text\":\" 以下のプルリクエストが作成されました。:\\n
          Title : ${{ github.event.pull_request.title}}\\n
          URL   : ${{ github.event.pull_request.html_url}}\\n
          Author: ${{ github.event.pull_request.user.login}}\"}"
