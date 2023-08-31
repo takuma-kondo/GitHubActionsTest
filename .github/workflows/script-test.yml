@@ -55,6 +55,10 @@ jobs:
                 .addRaw(summary)
                 .write();
             }
+            else{
+               console.log("This is not a pull request event.");
+            }
+
 
     - uses: slackapi/slack-github-action@v1.16.0
       if: steps.conflict_pull_requests.outputs.value != ''
