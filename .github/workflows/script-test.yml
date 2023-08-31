@@ -16,52 +16,32 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-            const context = github.context;
             const pullRequest = context.payload.pull_request;
             if (pullRequest) {
               const pullTitle = pullRequest.title;
               const pullUrl = pullRequest.html_url;
-              const pullNumber = pullRequest.number;
-              const pullAuthor = pullRequest.user.login;
-
-              // プルリクエストの詳細情報を取得
-              const pullRequestResponse = await github.rest.pulls.get({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: pullNumber
-              });
-
-              const assigneesResponse = await github.rest.issues.listAssignees({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: pullNumber
-              });
-
-              const assignees = assigneesResponse.data.map(assignee => assignee.login);
-
-              const requestedReviewersResponse = await github.rest.pulls.listRequestedReviewers({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: pullNumber
-              });
-
-              const requestedReviewers = requestedReviewersResponse.data.users.map(reviewer => reviewer.login);
-
-              let summary = `新しいプルリクエストが作成されました！\n\n`;
-              summary += `タイトル: ${pullTitle}\n`;
-              summary += `作成者: ${pullAuthor}\n`;
-              summary += `URL: ${pullUrl}\n`;
-              if (assignees.length > 0) {
-                summary += `割り当てられたユーザー: ${assignees.join(', ')}\n`;
-              }
-              if (requestedReviewers.length > 0) {
-                summary += `レビュアー: ${requestedReviewers.join(', ')}\n`;
-              }
               
+              // 割り当てされたユーザー(担当者)を取得
+              const assignees = assigneesResponse.data.map(assignee => assignee.login);
+              const assigneesString = assignees.join(', ');
+
+              // 割り当てされたユーザー(レビューア)を取得
+              const requestedReviewers = requestedReviewersResponse.data.users.map(reviewer => reviewer.login);
+              const requestedReviewersString = requestedReviewers.join(', ');
+
+              let summary = "";
+              summary += "<!channel>\\n";
+              summary += "pullTitle\\n";
+              summary += "github.event.pull_request.html_url\\n";
+              summary += "assigneesString\\n";
+              summary += "requestedReviewersString\\n";
+
+
               core.setOutput('value', '<!here>\\n' + '以下のプルリクエストが作成されました\\n' + 
-              'Title  : ' + pullTitle + '\\n' +
-              'URL    : ' + github.event.pull_request.html_url + '\\n' +
-              'Author : ' + pullAuthor + '\\n' );　
+              'Title    : ' + pullTitle + '\\n' +
+              'URL      : ' + github.event.pull_request.html_url + '\\n' +
+              'Author   : ' + assigneesString + '\\n' + 
+              'Reviewer : ' + requestedReviewersString + '\\n' );　
              
               await core.summary
                 .addHeading('New Pull Request Created')
