@@ -48,7 +48,7 @@
     <Compile Include="JapaneseGreet.cs" />
     <Compile Include="OutputConsole.cs" />
     <Compile Include="OutputFille.cs" />
-    <Compile Include="OutputGreet.cs" />
+    <Compile Include="Output.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TimeSlot.cs" />

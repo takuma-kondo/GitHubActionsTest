@@ -4,17 +4,16 @@ using System.Globalization;
 
 namespace BridgePattern
 {
-    public class OutputConsole : OutputGreet
+    public class OutputConsole : Output
     {
 
         public OutputConsole(Greet greet) : base(greet)
         {
         }
 
-        public override void Output()
+        public override void OutputGreet()
         {
-            Console.WriteLine(GetGreet());
+            Console.WriteLine(m_Greet.GetGreet());
         }
-
     }
 }

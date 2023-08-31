@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtoType", "..\ProtoType\P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderPattern", "..\BuilderPattern\BuilderPattern.csproj", "{4045834D-0FB2-4F12-A377-6B22A1289DA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstructFactory", "..\AbstructFactory\AbstructFactory.csproj", "{846E5582-ECF2-4166-99CE-0A454904FCBF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory", "..\AbstructFactory\AbstractFactory.csproj", "{846E5582-ECF2-4166-99CE-0A454904FCBF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BridgePattern", "..\BridgePattern\BridgePattern.csproj", "{787AA374-5631-4EC7-86D6-A32F575D1D33}"
 EndProject

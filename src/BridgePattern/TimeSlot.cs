@@ -3,7 +3,7 @@
     public enum TimeSlot
     {
         Morning,
-        Afternoon,
+        Noon,
         Night
     }
 }

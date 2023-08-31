@@ -1,4 +1,4 @@
-﻿namespace AbstructFactory
+﻿namespace AbstractFactory
 {
     public class EnglishFactory
     {
