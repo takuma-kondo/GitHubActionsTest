@@ -16,37 +16,31 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-            const pullRequest = context.payload.pull_request;
-            if (pullRequest) {
-              const pullTitle = pullRequest.title;
-              const pullUrl = pullRequest.html_url;
-
               // プルリクエストの詳細情報を取得
-              const pullRequestResponse = await github.rest.pulls.get({
+                const pull_request = await github.rest.pull.get({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                });
+
+              const assigneesResponse = await github.rest.issue.listAssignees({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                pull_number: pullRequest.number
+                pull_number: pull_request.number
               });
 
-              const assigneesResponse = await github.rest.issues.listAssignees({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: pullRequest.number
-              });
-              
               // 割り当てされたユーザー(担当者)を取得
               const assignees = assigneesResponse.data.map(assignee => assignee.login);
               const assigneesString = assignees.join(', ');
 
               let summary = "";
               summary += "<!channel>\\n";
-              summary += "pullTitle\\n";
+              summary += " github.event.pull_request.title\\n";
               summary += "github.event.pull_request.html_url\\n";
               summary += "assigneesString\\n";
 
 
               core.setOutput('value', '<!here>\\n' + '以下のプルリクエストが作成されました\\n' + 
-              'Title    : ' + pullTitle + '\\n' +
+              'Title    : ' + github.event.pull_request.title + '\\n' +
               'URL      : ' + github.event.pull_request.html_url + '\\n' +
               'Author   : ' + assigneesString + '\\n' );　
              
@@ -55,11 +49,6 @@ jobs:
                 .addRaw(summary)
                 .write();
             }
-            else{
-               console.log("This is not a pull request event.");
-            }
-
-
     - uses: slackapi/slack-github-action@v1.16.0
       if: steps.conflict_pull_requests.outputs.value != ''
       with:
