@@ -56,7 +56,12 @@ jobs:
               if (requestedReviewers.length > 0) {
                 summary += `レビュアー: ${requestedReviewers.join(', ')}\n`;
               }
-
+              
+              core.setOutput('value', '<!here>\\n' + '以下のプルリクエストが作成されました\\n' + 
+              'Title  : ' + pullTitle + '\\n' +
+              'URL    : ' + github.event.pull_request.html_url + '\\n' +
+              'Author : ' + pullAuthor + '\\n' );　
+             
               await core.summary
                 .addHeading('New Pull Request Created')
                 .addRaw(summary)
