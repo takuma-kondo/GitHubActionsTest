@@ -1,16 +1,32 @@
-name: PullRequest_Inoue
+name: PullRequest_INOEKaKEE
 on:
   pull_request:
     branches:
       - main
   workflow_dispatch:
 jobs:
-  name: Update Pull Request Title
-  run: |
-    PR_NUMBER=${{ github.event.pull_request.number }}
-    NEW_TITLE="新しいタイトル"
+  inoue-title:
+    timeout-minutes: 2
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/github-script@v6
+      id: send_info_pull_requests
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const title = github.event.pull_request.title;
+          const newTitle = "井上かっけぇぇぇ"; // 新しいタイトルを設定
 
-    # GitHub APIを使用してタイトルを変更
-    curl -X PATCH -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-      -d "{\"title\":\"$NEW_TITLE\"}" \
-      "https://api.github.com/repos/${{ github.repository }}/pulls/$PR_NUMBER"
+          
+
+          const octokit = new Octokit({
+            auth: process.env.GITHUB_TOKEN,
+          });
+
+          // タイトルを更新
+          octokit.pulls.update({
+            owner: github.context.repo.owner,
+            repo: github.context.repo.repo,
+            pull_number: github.context.payload.pull_request.number,
+            title: newTitle,
+          });
