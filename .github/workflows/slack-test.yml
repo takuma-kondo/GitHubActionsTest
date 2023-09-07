@@ -14,7 +14,7 @@ jobs:
         payload: "{\"text\":\" 以下のプルリクエストが作成されました。\\n 
          Title   : ${{ github.event.pull_request.title}}\\n 
          URL     : ${{ github.event.pull_request.html_url}}\\n
-         Revwers : ${{ github.event.pull_request.requested_reviewers[0].name}}\"}"
+         Revwer : ${{ github.event.pull_request.requested_reviewers[0].name}}\"}"
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
