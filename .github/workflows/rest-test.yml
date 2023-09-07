@@ -17,7 +17,7 @@ jobs:
             const pull_request = await github.rest.pulls.get({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              pull_number:pull.number
+              pull_number: github.context.payload.pull_request.number
             });
 
             const infos = [];
