@@ -5,7 +5,7 @@ on:
       - main
   workflow_dispatch:
 jobs:
-  script-summary:
+  inoue-title:
     timeout-minutes: 2
     runs-on: ubuntu-latest
     steps:
