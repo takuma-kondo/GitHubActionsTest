@@ -14,15 +14,11 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-           const pulls = await github.rest.pulls.list({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-            });
-            for (const pull of pulls.data) {
-                let pull_request = await github.rest.pulls.get({
+                const pull_number = github.event.pull_request.number;
+                const pull_request = await github.rest.pulls.get({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
-                  pull_number: pull.number
+                  pull_number: pull_number
                 });
 
             const infos = [];
