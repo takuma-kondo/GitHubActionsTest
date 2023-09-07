@@ -25,8 +25,8 @@ jobs:
               if(mergerable)
               {
                 let summary = "";
-                summary += URL;
-                summary += Title + "\\n";
+                summary += url;
+                summary += title + "\\n";
                 summary += assign + "\\n";
                 summary += reviewers + "\\n";
                 
