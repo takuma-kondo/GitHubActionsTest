@@ -1,12 +1,11 @@
-name: PullRequest_Confirm
+name: PullRequest_Info
 on:
   pull_request:
     branches:
       - main
   workflow_dispatch:
 jobs:
-  script-summary:
-    timeout-minutes: 2
+  send_info_pull_request:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/github-script@v6
