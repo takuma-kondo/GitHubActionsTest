@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: slackapi/slack-github-action@v1.16.0
+    if:${{ github.event.pull_request.requested_reviewers[0].login == 'yus-sasaki'}}
       with:
         payload: "{\"text\":\" 以下のプルリクエストが作成されました。\\n 
          Title   : ${{ github.event.pull_request.title}}\\n 
