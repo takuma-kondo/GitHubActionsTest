@@ -1,0 +1,49 @@
+name: Rest_Test
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  rest-test:
+    timeout-minutes: 2
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/github-script@v6
+      id: pull_requests
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+                const pulls = await github.rest.pulls.list({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                });
+            for (const pull of pulls.data) {
+                let pull_request = await github.rest.pulls.get({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: pull.number
+                });
+
+                const infos = [];
+
+                if(pull_request.data.mergeable)
+                {
+                  const title = pull_request.data.title;
+                  infos.push(title);
+                  const url = pull_request.data.html_url;
+                  infos.push(url);
+                  const reviewers = pull_request.data.requested_reviewers.map(reviewer => reviewer.login);
+                  infos.push(reviewers);
+                  const assignees = pull_request.data.assignees.map(assignee => assignee.login);
+                  infos.push(assignees);
+
+                  core.setOutput('value','以下のプルリクエストが作成されました\\n' + infos.join("\\n") );
+                }
+              }
+    - uses: slackapi/slack-github-action@v1.16.0
+      if: steps.pull_requests.outputs.value != ''
+      with:
+        payload: "{\"text\":\"${{ steps.pull_requests.outputs.value }}\"}"
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
