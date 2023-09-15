@@ -1,0 +1,136 @@
+{
+  "Type": "Project",
+  "TopElementId": "73a4fa7a-a664-4d44-a5a0-49a2820efb2a",
+  "SchemaVersion": "11.1",
+  "Project": {
+    "Id": "73a4fa7a-a664-4d44-a5a0-49a2820efb2a",
+    "Name": "新規プロジェクト",
+    "Summary": "",
+    "Group": null,
+    "Icon": "",
+    "OutputModelPath": false
+  },
+  "Profiles": [
+    {
+      "Id": "f6ee306a-ddf1-4f5d-a698-89e868fae9dc",
+      "Name": "新規プロジェクト",
+      "ProtectKey": null,
+      "IsProtected": false,
+      "Metamodels": {
+        "Packages": [
+          {
+            "Id": "System",
+            "Name": "System",
+            "FullName": "System"
+          },
+          {
+            "Id": "System.Behavior",
+            "Name": "Behavior",
+            "FullName": "System.Behavior"
+          },
+          {
+            "Id": "DensoCreate",
+            "Name": "DensoCreate",
+            "FullName": "DensoCreate"
+          },
+          {
+            "Id": "DensoCreate.Indio",
+            "Name": "Indio",
+            "FullName": "DensoCreate.Indio"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF",
+            "Name": "IMF",
+            "FullName": "DensoCreate.Indio.IMF"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Model",
+            "Name": "Model",
+            "FullName": "DensoCreate.Indio.IMF.Model"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Model.RepresentationModel",
+            "Name": "RepresentationModel",
+            "FullName": "DensoCreate.Indio.IMF.Model.RepresentationModel"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions",
+            "Name": "Extensions",
+            "FullName": "DensoCreate.Indio.IMF.Extensions"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions.Diagram",
+            "Name": "Diagram",
+            "FullName": "DensoCreate.Indio.IMF.Extensions.Diagram"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions.Sequence",
+            "Name": "Sequence",
+            "FullName": "DensoCreate.Indio.IMF.Extensions.Sequence"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions.Form",
+            "Name": "Form",
+            "FullName": "DensoCreate.Indio.IMF.Extensions.Form"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions.ProductLine",
+            "Name": "ProductLine",
+            "FullName": "DensoCreate.Indio.IMF.Extensions.ProductLine"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions.Custom",
+            "Name": "Custom",
+            "FullName": "DensoCreate.Indio.IMF.Extensions.Custom"
+          },
+          {
+            "Id": "b10b5c48-30e9-42c2-9de6-8fd299d91c50",
+            "Name": "新規プロジェクト",
+            "FullName": "新規プロジェクト",
+            "DisplayName": "新規プロジェクト",
+            "Tags": [
+              {
+                "Name": "System.Root",
+                "Value": "true"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "Entities": [
+    {
+      "Id": "73a4fa7a-a664-4d44-a5a0-49a2820efb2a",
+      "EntityType": null,
+      "Name": "新規プロジェクト",
+      "MetamodelId": "System.Project.ProjectClass",
+      "Metamodel": "ProjectClass",
+      "Fields": {
+        "Name": "新規プロジェクト",
+        "Description": ""
+      }
+    },
+    {
+      "Id": "fc911e67-e542-495b-9d24-e132b1e35656",
+      "EntityType": null,
+      "Name": "新規プロジェクト",
+      "MetamodelId": "System.Design.___DesignModel",
+      "Metamodel": "DesignModel",
+      "Fields": {
+        "Name": "新規プロジェクト"
+      }
+    }
+  ],
+  "Relations": [
+    {
+      "Id": "48b52bfd-0ec9-434a-aadc-f81f304eb3e5",
+      "RelationType": "Embed",
+      "MetamodelId": "System.Core.___ModelRoot_RootModels",
+      "Metamodel": "___ModelRoot_RootModels",
+      "SourceId": "73a4fa7a-a664-4d44-a5a0-49a2820efb2a",
+      "TargetId": "fc911e67-e542-495b-9d24-e132b1e35656",
+      "TargetIndex": -1
+    }
+  ]
+}
