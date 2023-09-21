@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\GitHubActionsTest\\src\\Singleton\\Singleton.csproj",
-      "projectName": "Singleton",
-      "projectPath": "C:\\Git\\GitHubActionsTest\\src\\Singleton\\Singleton.csproj",
+      "projectUniqueName": "C:\\Git\\GitHubActionsTest\\src\\Strategy\\Strategy.csproj",
+      "projectName": "Strategy",
+      "projectPath": "C:\\Git\\GitHubActionsTest\\src\\Strategy\\Strategy.csproj",
       "packagesPath": "C:\\Users\\10042000563\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\GitHubActionsTest\\src\\Singleton\\obj\\",
+      "outputPath": "C:\\Git\\GitHubActionsTest\\src\\Strategy\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
