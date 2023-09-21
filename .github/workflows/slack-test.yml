@@ -25,7 +25,6 @@ jobs:
         echo "::set-output name=reviewer_name::$reviewer_name"
         shell: bash
 
-    - name: "Send Message"
     - uses: slackapi/slack-github-action@v1.16.0
       with:
         payload: "{\"text\":\" <${{ steps.check_reviewer.outputs.reviewer_name }}>\\n 以下のプルリクエストを作成しました。\\n 
