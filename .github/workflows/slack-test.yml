@@ -13,17 +13,18 @@ jobs:
       id: check_reviewer
       run: |
         reviewer=${{ github.event.pull_request.requested_reviewers[0].login }}
-        if [[$reviewer == *yus-sasaki*]]; 
-         then reviewer_name="@U01AQ8QSCH5"
-        elif [[$reviewer == *kojimadev*]]; 
-         then reviewer_name="@U20M5MPMZ"
-        elif [[$reviewer == *takuma-kondo*]]; 
-         then reviewer_name="@U04864XKT5J"
+        if [[ $reviewer == *yus-sasaki*]]; then 
+          reviewer_name="@U01AQ8QSCH5"
+        elif [[ $reviewer == *kojimadev*]]; then 
+          reviewer_name="@U20M5MPMZ"
+        elif [[ $reviewer == *takuma-kondo*]]; then 
+          reviewer_name="@U04864XKT5J"
         else 
           reviewer_name="Default"
         fi
         echo "::set-output name=reviewer_name::$reviewer_name"
         shell: bash
+
     - name: "Send Message"
     - uses: slackapi/slack-github-action@v1.16.0
       with:
