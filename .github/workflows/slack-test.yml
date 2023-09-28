@@ -11,16 +11,13 @@ jobs:
     steps:
     - name: member1
       if: github.event.pull_request.requested_reviewers[0].login == 'yus-sasaki'
-      run: | 
-        echo "Login_Name=U01AQ8QSCH5" >> "$GITHUB_ENV"
+      run: echo "Login_Name=U01AQ8QSCH5" >> "$GITHUB_ENV"
     - name: member2
       if: github.event.pull_request.requested_reviewers[0].login == 'kojimadev'
-      run: | 
-        echo "Login_Name=U20M5MPMZ" >> "$GITHUB_ENV"
+      run: echo "Login_Name=U20M5MPMZ" >> "$GITHUB_ENV"
     - name: member3
       if: github.event.pull_request.requested_reviewers[0].login == 'takuma-kondo'
-      run: | 
-        echo "Login_Name=U04864XKT5J" >> "$GITHUB_ENV"
+      run: echo "Login_Name=U04864XKT5J" >> "$GITHUB_ENV"
     - uses: slackapi/slack-github-action@v1.16.0
       with:
         payload: "{\"text\":\" <@${{ env.Login_Name }}>\\n 以下のプルリクエストを作成しました。\\n 
