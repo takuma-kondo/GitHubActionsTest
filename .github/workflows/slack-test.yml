@@ -21,8 +21,7 @@ jobs:
       if: github.event.pull_request.requested_reviewers[0].login == 'takuma-kondo'
       run: | 
         echo "Login_Name=U04864XKT5J" >> "$GITHUB_ENV"
-    - name: Send Message
-      uses: slackapi/slack-github-action@v1.16.0
+    - uses: slackapi/slack-github-action@v1.16.0
       with:
         payload: "{\"text\":\" <@${{ env.Login_Name }}>\\n 以下のプルリクエストを作成しました。\\n 
          Title     : ${{ github.event.pull_request.title}}\\n 
