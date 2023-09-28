@@ -27,8 +27,8 @@ jobs:
       run: echo "Login_Name=U01GSRR930X" >> "$GITHUB_ENV"
     - name: member7
       if: github.event.pull_request.requested_reviewers[0].login == 'maegawa-h'
-      run: echo "Login_Name=mae" >> "$GITHUB_ENV"
-    - name: member7
+      run: echo "Login_Name=U01SQB7QB36" >> "$GITHUB_ENV"
+    - name: member8
       if: github.event.pull_request.requested_reviewers[0].login == 'takuma-kondo'
       run: echo "Login_Name=U04864XKT5J" >> "$GITHUB_ENV"         
     - uses: slackapi/slack-github-action@v1.16.0
