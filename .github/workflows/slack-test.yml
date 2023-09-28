@@ -1,8 +1,6 @@
 name: PullRequest_Confirm
 on:
   pull_request:
-    branches:
-      - main
   workflow_dispatch:
 jobs:
   test-message:
@@ -16,9 +14,25 @@ jobs:
       if: github.event.pull_request.requested_reviewers[0].login == 'kojimadev'
       run: echo "Login_Name=U20M5MPMZ" >> "$GITHUB_ENV"
     - name: member3
+      if: github.event.pull_request.requested_reviewers[0].login == 'niimima'
+      run: echo "Login_Name=UCCKK025U" >> "$GITHUB_ENV"
+    - name: member4
+      if: github.event.pull_request.requested_reviewers[0].login == 'minoura-a'
+      run: echo "Login_Name=UPQ3BLL3V" >> "$GITHUB_ENV"
+    - name: member5
+      if: github.event.pull_request.requested_reviewers[0].login == 'DC-k-sumiya'
+      run: echo "Login_Name=U02JFRLGN8L" >> "$GITHUB_ENV"
+    - name: member6
+      if: github.event.pull_request.requested_reviewers[0].login == 'DC-kamikawa-m'
+      run: echo "Login_Name=U01GSRR930X" >> "$GITHUB_ENV"
+    - name: member7
+      if: github.event.pull_request.requested_reviewers[0].login == 'maegawa-h'
+      run: echo "Login_Name=mae" >> "$GITHUB_ENV"
+    - name: member7
       if: github.event.pull_request.requested_reviewers[0].login == 'takuma-kondo'
-      run: echo "Login_Name=U04864XKT5J" >> "$GITHUB_ENV"
+      run: echo "Login_Name=U04864XKT5J" >> "$GITHUB_ENV"         
     - uses: slackapi/slack-github-action@v1.16.0
+      if: env.Login_Name != '' 
       with:
         payload: "{\"text\":\" <@${{ env.Login_Name }}>\\n 以下のプルリクエストを作成しました。\\n 
          Title     : ${{ github.event.pull_request.title}}\\n 
