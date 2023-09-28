@@ -9,28 +9,25 @@ jobs:
     timeout-minutes: 2
     runs-on: ubuntu-latest
     steps:
-    - name: "Get Reviewr Name"
-      id: check_reviewer
-      run: |
-        reviewer=${{ github.event.pull_request.requested_reviewers[0].login }}
-        if [[ $reviewer == *yus-sasaki*]]; then 
-          reviewer_name="@U01AQ8QSCH5"
-        elif [[ $reviewer == *kojimadev*]]; then 
-          reviewer_name="@U20M5MPMZ"
-        elif [[ $reviewer == *takuma-kondo*]]; then 
-          reviewer_name="@U04864XKT5J"
-        else 
-          reviewer_name="Default"
-        fi
-        echo "::set-output name=reviewer_name::$reviewer_name"
-        shell: bash
-
+    - name: "member1"
+      id: menber1
+      if: github.event.pull_request.requested_reviewers[0].login == 'yus-sasaki'
+      run: echo "Login_Name=${{ @U01AQ8QSCH5 }}" >> "$GITHUB_ENV"
+    - name: "member1"
+      id: menber1
+      if: github.event.pull_request.requested_reviewers[0].login == 'kojimadev'
+      run: echo "Login_Name=${{ @U20M5MPMZ }}" >> "$GITHUB_ENV"
+    - name: "member1"
+      id: menber1
+      if: github.event.pull_request.requested_reviewers[0].login == 'takuma-kondo'
+      run: echo "Login_Name=${{ @U04864XKT5J }}" >> "$GITHUB_ENV"
+    - name: "Send Message"
     - uses: slackapi/slack-github-action@v1.16.0
       with:
-        payload: "{\"text\":\" <${{ steps.check_reviewer.outputs.reviewer_name }}>\\n 以下のプルリクエストを作成しました。\\n 
+        payload: "{\"text\":\" <${{ env.Login_Name }}>\\n 以下のプルリクエストを作成しました。\\n 
          Title     : ${{ github.event.pull_request.title}}\\n 
          URL       : ${{ github.event.pull_request.html_url}}\\n
-         Assignees : ${{ github.event.pull_request.assignees[0].login　}}\\n
-         Revwer    : ${{ github.event.pull_request.requested_reviewers[0].login　}}\"}"     
+         Assignees : ${{ github.event.pull_request.assignees[0].login}}\\n
+         Revwer    : ${{ github.event.pull_request.requested_reviewers[0].login}}\"}"     
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

@@ -1,23 +1,20 @@
 ﻿namespace Strategy;
 
-public class IssueImportanceSort: IssueSort
+public class PrioritySort:IssueSort
 {
-    #region 公開メソッド
-
     public override void Sort(List<Issue> issues)
     {
         issues.Sort((x, y) =>
             {
-                var importanceCompare = x.Importance.CompareTo(y.Importance);
-                if (importanceCompare == 0)
+                var priorityCompare = x.Priority.CompareTo(y.Priority);
+                if (priorityCompare == 0)
                 {
                     return String.Compare(x.Id, y.Id, StringComparison.Ordinal);
                 }
 
-                return importanceCompare;
+                return priorityCompare;
             }
         );
     }
-
-    #endregion
+    
 }
