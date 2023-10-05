@@ -1,7 +1,8 @@
 name: PullRequest_Confirm
 on:
   pull_request:
-  workflow_dispatch:
+   types:
+    - assigned
 jobs:
   test-message:
     timeout-minutes: 2
