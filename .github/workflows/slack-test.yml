@@ -3,6 +3,8 @@ on:
   pull_request:
    types:
     - assigned
+    - review_requested
+    - labeled
 jobs:
   test-message:
     timeout-minutes: 2
