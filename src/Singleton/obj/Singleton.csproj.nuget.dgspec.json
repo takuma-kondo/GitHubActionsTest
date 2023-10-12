@@ -27,7 +27,6 @@
           "net6.0"
         ],
         "sources": {
-          "C:\\Git\\Lakewood_dev\\src\\Lakewood\\DesktopApp\\LightningReview\\Extensions\\Utilities\\DocumentParserIntegration.Test\\NDランタイム_v3.1.5": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {},

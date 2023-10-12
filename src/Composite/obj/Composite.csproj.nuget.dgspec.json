@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Git\\GitHubActionsTest\\src\\Strategy\\Strategy.csproj": {}
+    "C:\\Git\\GitHubActionsTest\\src\\Composite\\Composite.csproj": {}
   },
   "projects": {
-    "C:\\Git\\GitHubActionsTest\\src\\Strategy\\Strategy.csproj": {
+    "C:\\Git\\GitHubActionsTest\\src\\Composite\\Composite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\GitHubActionsTest\\src\\Strategy\\Strategy.csproj",
-        "projectName": "Strategy",
-        "projectPath": "C:\\Git\\GitHubActionsTest\\src\\Strategy\\Strategy.csproj",
+        "projectUniqueName": "C:\\Git\\GitHubActionsTest\\src\\Composite\\Composite.csproj",
+        "projectName": "Composite",
+        "projectPath": "C:\\Git\\GitHubActionsTest\\src\\Composite\\Composite.csproj",
         "packagesPath": "C:\\Users\\10042000563\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\GitHubActionsTest\\src\\Strategy\\obj\\",
+        "outputPath": "C:\\Git\\GitHubActionsTest\\src\\Composite\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",

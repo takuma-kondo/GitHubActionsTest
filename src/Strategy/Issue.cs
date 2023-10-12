@@ -12,12 +12,12 @@ public class Issue
     /// <summary>
     /// 指摘の優先度
     /// </summary>
-    public string Priority { get; set; }
+    public Priority Priority { get; set; }
 
     /// <summary>
     /// 指摘の重大度
     /// </summary>
-    public string Importance { get; set; }
+    public Importance Importance { get; set; }
 
     /// <summary>
     /// 指摘のアウトラインノード名
