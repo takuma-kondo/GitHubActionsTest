@@ -2,9 +2,8 @@ name: PullRequest_Confirm
 on:
   pull_request:
    types:
-    - assigned
     - review_requested
-    - labeled
+    - ready_for_review
 jobs:
   test-message:
     timeout-minutes: 2
