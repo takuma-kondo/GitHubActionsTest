@@ -1,8 +1,10 @@
 public class SampleClass
 {
-    public int AddNumbers(int a, int b)
+    public int AddNumbers(int a, int d)
     {
-        return a + b;
+        var b = 2*a;
+        d += b; 
+        return a + d;
     }
 
     public string ConcatenateStrings(string str1, string str2)
