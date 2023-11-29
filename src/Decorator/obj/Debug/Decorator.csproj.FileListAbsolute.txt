@@ -1,0 +1,6 @@
+C:\Git\GitHubActionsTest\src\Decorator\bin\Debug\Decorator.exe
+C:\Git\GitHubActionsTest\src\Decorator\bin\Debug\Decorator.pdb
+C:\Git\GitHubActionsTest\src\Decorator\obj\Debug\Decorator.csproj.AssemblyReference.cache
+C:\Git\GitHubActionsTest\src\Decorator\obj\Debug\Decorator.csproj.CoreCompileInputs.cache
+C:\Git\GitHubActionsTest\src\Decorator\obj\Debug\Decorator.exe
+C:\Git\GitHubActionsTest\src\Decorator\obj\Debug\Decorator.pdb

@@ -1,0 +1,8 @@
+C:\Git\GitHubActionsTest\src\Visitor\bin\Debug\Visitor.exe.config
+C:\Git\GitHubActionsTest\src\Visitor\bin\Debug\Visitor.exe
+C:\Git\GitHubActionsTest\src\Visitor\bin\Debug\Visitor.pdb
+C:\Git\GitHubActionsTest\src\Visitor\obj\Debug\Visitor.csproj.AssemblyReference.cache
+C:\Git\GitHubActionsTest\src\Visitor\obj\Debug\Visitor.csproj.SuggestedBindingRedirects.cache
+C:\Git\GitHubActionsTest\src\Visitor\obj\Debug\Visitor.csproj.CoreCompileInputs.cache
+C:\Git\GitHubActionsTest\src\Visitor\obj\Debug\Visitor.exe
+C:\Git\GitHubActionsTest\src\Visitor\obj\Debug\Visitor.pdb

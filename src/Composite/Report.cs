@@ -1,9 +1,5 @@
 ﻿namespace Composite;
 
-public class Report:ReportEntory
+public class Report:ReportEntry
 {
-    public override void Remove()
-    {
-        throw new NotImplementedException();
-    }
 }
