@@ -1,0 +1,8 @@
+C:\Git\GitHubActionsTest\src\ChainOfResponsibility\bin\Debug\ChainOfResponsibility.exe.config
+C:\Git\GitHubActionsTest\src\ChainOfResponsibility\bin\Debug\ChainOfResponsibility.exe
+C:\Git\GitHubActionsTest\src\ChainOfResponsibility\bin\Debug\ChainOfResponsibility.pdb
+C:\Git\GitHubActionsTest\src\ChainOfResponsibility\obj\Debug\ChainOfResponsibility.csproj.AssemblyReference.cache
+C:\Git\GitHubActionsTest\src\ChainOfResponsibility\obj\Debug\ChainOfResponsibility.csproj.SuggestedBindingRedirects.cache
+C:\Git\GitHubActionsTest\src\ChainOfResponsibility\obj\Debug\ChainOfResponsibility.csproj.CoreCompileInputs.cache
+C:\Git\GitHubActionsTest\src\ChainOfResponsibility\obj\Debug\ChainOfResponsibility.exe
+C:\Git\GitHubActionsTest\src\ChainOfResponsibility\obj\Debug\ChainOfResponsibility.pdb

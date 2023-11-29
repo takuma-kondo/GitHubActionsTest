@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator", "..\Decorator\D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visitor", "..\Visitor\Visitor.csproj", "{DAC1BFD6-52CA-4A37-8DB9-E5231C281F85}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibility", "..\ChainOfResponsibility\ChainOfResponsibility.csproj", "{915F2941-5E97-494B-82C4-3F14495B60DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{DAC1BFD6-52CA-4A37-8DB9-E5231C281F85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAC1BFD6-52CA-4A37-8DB9-E5231C281F85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAC1BFD6-52CA-4A37-8DB9-E5231C281F85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{915F2941-5E97-494B-82C4-3F14495B60DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{915F2941-5E97-494B-82C4-3F14495B60DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{915F2941-5E97-494B-82C4-3F14495B60DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{915F2941-5E97-494B-82C4-3F14495B60DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

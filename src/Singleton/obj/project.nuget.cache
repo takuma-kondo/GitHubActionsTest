@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KFmEazuMwrmj/Y2jLyO9SFSzNqocnt5XnzfV1ftnpl1FhO7JCmpC93iop34z9qa+z9F8UaGQ0dIfWM/TBx5W9Q==",
+  "dgSpecHash": "wuOiu2LFiW9H9qf3Q3sGJBLCCTpgwX17VrE0MEJICClNhlU9tynmq6uX1rtaf3pmSnruXLO22KK7FD3YwjIpfg==",
   "success": true,
   "projectFilePath": "C:\\Git\\GitHubActionsTest\\src\\Singleton\\Singleton.csproj",
   "expectedPackageFiles": [],
