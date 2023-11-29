@@ -7,6 +7,11 @@ public class SampleClass
         return a + d;
     }
 
+    public int SubtractNumbers(int a, int b)
+    {
+        return a - b;
+    }
+
     public string ConcatenateStrings(string str1, string str2)
     {
         return str1 + str2;
