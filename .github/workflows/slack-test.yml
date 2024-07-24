@@ -7,7 +7,6 @@ jobs:
   test-message:
     timeout-minutes: 2
     runs-on: ubuntu-latest
-
     steps:
       - name: Send Slack Notification
         uses: slackapi/slack-github-action@v1.16.0 
