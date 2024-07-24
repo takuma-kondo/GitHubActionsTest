@@ -11,6 +11,6 @@ jobs:
       - name: Send Slack Notification
         uses: slackapi/slack-github-action@v1.16.0 
         with:
-         payload: {"text":"プッシュしました。"}
+          payload: '{"text":"プッシュしました。"}'
         env:
-         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
