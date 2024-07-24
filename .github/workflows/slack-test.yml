@@ -8,8 +8,8 @@ jobs:
     timeout-minutes: 2
     runs-on: ubuntu-latest
     steps:        
-    - uses: slackapi/slack-github-action@v1.16.0 
-      with:
-        payload: {"text":"プッシュしました。"}
-      env:
-        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+    　- uses: slackapi/slack-github-action@v1.16.0 
+      　with:
+        　payload: {"text":"プッシュしました。"}
+      　env:
+       　 SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
