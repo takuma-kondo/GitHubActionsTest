@@ -1,0 +1,8 @@
+C:\Git\GitHubActionsTest\src\Facade\bin\Debug\Facade.exe.config
+C:\Git\GitHubActionsTest\src\Facade\bin\Debug\Facade.exe
+C:\Git\GitHubActionsTest\src\Facade\bin\Debug\Facade.pdb
+C:\Git\GitHubActionsTest\src\Facade\obj\Debug\Facade.csproj.AssemblyReference.cache
+C:\Git\GitHubActionsTest\src\Facade\obj\Debug\Facade.csproj.SuggestedBindingRedirects.cache
+C:\Git\GitHubActionsTest\src\Facade\obj\Debug\Facade.csproj.CoreCompileInputs.cache
+C:\Git\GitHubActionsTest\src\Facade\obj\Debug\Facade.exe
+C:\Git\GitHubActionsTest\src\Facade\obj\Debug\Facade.pdb
