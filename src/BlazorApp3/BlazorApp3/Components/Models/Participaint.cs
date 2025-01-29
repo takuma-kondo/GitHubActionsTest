@@ -4,5 +4,7 @@
     {
         public int EmployeeNumber { get; set; }
         public string Name { get; set; }
+
+        public bool HasWon { get; set; }
     }
 }

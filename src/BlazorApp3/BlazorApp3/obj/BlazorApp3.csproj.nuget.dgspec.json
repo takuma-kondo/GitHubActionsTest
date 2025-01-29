@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp3.csproj": {}
+    "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\BlazorApp3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp3.csproj": {
+    "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\BlazorApp3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp3.csproj",
+        "projectUniqueName": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\BlazorApp3.csproj",
         "projectName": "BlazorApp3",
-        "projectPath": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\BlazorApp3.csproj",
+        "projectPath": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\BlazorApp3.csproj",
         "packagesPath": "C:\\Users\\10042000563\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\obj\\",
+        "outputPath": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",

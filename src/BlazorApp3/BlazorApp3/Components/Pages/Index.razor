@@ -1,21 +1,33 @@
 ﻿@page "/"
 @using BlazorApp3.Components.Models
 @using BlazorApp3.Components.Services
-@using BlazorApp3.Components.Models
 @inject ILotteryService LotteryService
+@inject IJSRuntime JSRuntime
 
 <h1>抽選アプリ</h1>
 
-<button class="btn btn-primary" @onclick="TestClick">追加</button>
-
 <div class="container">
-    <!-- 参加者登録フォーム -->
+    <!-- 抽選コントロールエリア -->
+    <div class="text-center mb-4 control-panel">
+        <button class="btn btn-success btn-lg me-2" @onclick="StartLottery"
+                disabled="@(isAnimating || !participants.Any(p => !p.HasWon))">
+            抽選開始
+        </button>
+        <button class="btn btn-warning btn-lg me-2" @onclick="ResetLottery">履歴リセット</button>
+        <button class="btn btn-danger btn-lg" @onclick="ClearAllParticipants">参加者一括削除</button>
+    </div>
+
+    <!-- 参加者一括登録フォーム -->
     <div class="form-group mb-4">
         <h4>参加者登録</h4>
-        <div class="input-group">
-            <input type="number" @bind="newParticipant.EmployeeNumber" @bind:event="oninput" class="form-control" placeholder="職番" />
-            <input type="text" @bind="newParticipant.Name" @bind:event="oninput" class="form-control" placeholder="名前" />
-            <button type="button" class="btn btn-primary" @onclick="AddParticipant">追加</button>
+        <div class="form-group">
+            <textarea @bind="bulkInput"
+                      @bind:event="oninput"
+                      class="form-control"
+                      rows="5"
+                      placeholder="職番と名前を貼り付けてください（例：&#13;&#10;1001 山田太郎&#13;&#10;1002 鈴木花子）"></textarea>
+            <small class="form-text text-muted">Excelからコピーした職番と名前を貼り付けてください。</small>
+            <button type="button" class="btn btn-primary mt-2" @onclick="AddBulkParticipants">一括追加</button>
         </div>
     </div>
 
@@ -27,6 +39,7 @@
                 <tr>
                     <th>職番</th>
                     <th>名前</th>
+                    <th>当選状況</th>
                     <th></th>
                 </tr>
             </thead>
@@ -36,6 +49,7 @@
                     <tr>
                         <td>@participant.EmployeeNumber</td>
                         <td>@participant.Name</td>
+                        <td>@(participant.HasWon ? "当選済" : "")</td>
                         <td>
                             <button class="btn btn-danger btn-sm" @onclick="() => RemoveParticipant(participant)">削除</button>
                         </td>
@@ -45,130 +59,367 @@
         </table>
     </div>
 
-    <!-- 抽選エリア -->
-    <div class="text-center mb-4">
-        <button class="btn btn-success btn-lg" @onclick="StartLottery" disabled="@(isAnimating || participants.Count == 0)">
-            抽選開始
-        </button>
+    <!-- 当選履歴 -->
+    <div class="mb-4">
+        <h4>当選履歴</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>抽選順</th>
+                    <th>職番</th>
+                    <th>名前</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < winningHistory.Count; i++)
+                {
+                    var winner = winningHistory[i];
+                    <tr>
+                        <td>@(i + 1)</td>
+                        <td>@winner.EmployeeNumber</td>
+                        <td>@winner.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>
-
-    <!-- 抽選アニメーション -->
-    @if (isAnimating)
-    {
-        <div class="lottery-animation">
-            <div class="lottery-ball">@currentNumber</div>
-        </div>
-    }
-
-    <!-- 当選結果 -->
-    @if (winner != null)
-    {
-        <div class="result-area text-center">
-            <h4>当選結果</h4>
-            <p class="h5">当選番号: @winner.EmployeeNumber</p>
-            <p class="h5">当選者: @winner.Name</p>
-        </div>
-    }
 </div>
 
+<!-- 抽選アニメーションオーバーレイ -->
+@if (isAnimating)
+{
+    <div class="lottery-overlay">
+        <div class="lottery-animation">
+            @if (showWinner)
+            {
+                <div class="winner-announcement">
+                    <div class="confetti">
+                        @for (var i = 0; i < 50; i++)
+                        {
+                            <i style="--fall-duration:@($"{Random.Shared.Next(2, 5)}s");
+                                    --fall-delay:@($"{Random.Shared.NextDouble() * 3}s");
+                                    --color:@($"rgb({Random.Shared.Next(0, 256)},{Random.Shared.Next(0, 256)},{Random.Shared.Next(0, 256)})");
+                                    --opacity:@($"{Random.Shared.NextDouble() * 0.5 + 0.5}");
+                                    --rotation:@($"{Random.Shared.Next(0, 360)}deg");
+                                    left:@($"{Random.Shared.Next(0, 100)}%");">
+                            </i>
+                        }
+                    </div>
+                    <div class="winner-number">
+                        @{
+                            var numberStr = currentWinner.EmployeeNumber.ToString();
+                            @for (int i = 0; i < numberStr.Length; i++)
+                            {
+                                <span class="digit-@(i % 3)">@numberStr[i]</span>
+                            }
+                        }
+                    </div>
+                    <div class="winner-name">@currentWinner.Name</div>
+                    <button class="btn btn-primary next-button" @onclick="CloseAnimation">次へ</button>
+                </div>
+            }
+            else
+            {
+                <div class="lottery-ball">
+                    @{
+                        var currentStr = currentNumber.ToString();
+                        @for (int i = 0; i < currentStr.Length; i++)
+                        {
+                            <span class="digit-@(i % 3)">@currentStr[i]</span>
+                        }
+                    }
+                </div>
+            }
+        </div>
+    </div>
+}
+
 <style>
+    .lottery-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
     .lottery-animation {
         text-align: center;
-        margin: 20px 0;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .lottery-ball {
-        display: inline-block;
-        width: 100px;
-        height: 100px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        height: 600px;
         background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
         border-radius: 50%;
-        line-height: 100px;
         color: white;
-        font-size: 24px;
         font-weight: bold;
         animation: bounce 0.5s infinite alternate;
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
     }
 
-    @@keyframes bounce {
-        0% {
-            transform: translateY(0);
+        .lottery-ball span {
+            font-size: 96px;
+            margin: 0 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
-        100% {
-            transform: translateY(-20px);
-        }
+    .winner-announcement {
+        position: relative;
+        padding: 60px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 30px;
+        animation: fadeIn 0.5s ease-out;
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+        min-width: 80%;
+        max-width: 1000px;
     }
 
-    .result-area {
-        margin-top: 20px;
+    .winner-number {
+        font-size: 120px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        line-height: 1.2;
+    }
+
+    .winner-name {
+        font-size: 60px;
+        margin-bottom: 40px;
+        color: #333;
+    }
+
+    .next-button {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        font-size: 24px;
+        padding: 15px 40px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+        transition: all 0.3s ease;
+    }
+
+        .next-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+        }
+
+    /* 数字の色分け */
+    .digit-0 {
+        color: #FF6B6B;
+        text-shadow: 2px 2px 4px rgba(255, 107, 107, 0.3);
+    }
+
+    .digit-1 {
+        color: #4ECDC4;
+        text-shadow: 2px 2px 4px rgba(78, 205, 196, 0.3);
+    }
+
+    .digit-2 {
+        color: #45B7D1;
+        text-shadow: 2px 2px 4px rgba(69, 183, 209, 0.3);
+    }
+
+    /* クラッカーアニメーション */
+    .confetti {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        width: 100%;
+        height: calc(100% + 20px);
+        pointer-events: none;
+        overflow: hidden;
+    }
+
+        .confetti i {
+            position: absolute;
+            display: block;
+            width: 8px;
+            height: 25px;
+            background-color: var(--color);
+            opacity: var(--opacity);
+            transform: rotate(var(--rotation)) translateY(var(--y));
+            animation: confetti-fall var(--fall-duration) var(--fall-delay) linear infinite;
+        }
+
+    @("@keyframes bounce")
+
+    bounce {
+        0%
+
+    {
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        transform: translateY(-30px) scale(1.02);
+    }
+
+    }
+
+    @("@keyframes fadeIn")
+
+    {
+        from
+
+    {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    }
+
+    @("@keyframes confetti-fall")
+
+    {
+        0%
+
+    {
+        transform: translateY(-100vh) rotate(var(--rotation));
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(calc(var(--rotation) + 360deg));
+    }
+
+    }
+
+    .control-panel {
+        background: #f8f9fa;
         padding: 20px;
-        background-color: #f8f9fa;
-        border-radius: 8px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 </style>
 
 @code {
     private List<Participant> participants = new List<Participant>();
-    private Participant newParticipant = new Participant();
-    private Participant winner;
+    private List<Participant> winningHistory = new List<Participant>();
     private bool isAnimating;
+    private bool showWinner;
     private int currentNumber;
+    private string bulkInput = "";
+    private Participant currentWinner;
 
-    // protected override void OnInitialized()
-    // {
-    //     participants = new List<Participant>();
-    //     newParticipant = new Participant();
-    //     base.OnInitialized();
-    // }
-
-    private void AddParticipant()
+    private void AddBulkParticipants()
     {
-        Console.WriteLine("AddParticipant called");
-        if (newParticipant.EmployeeNumber != 0 && !string.IsNullOrWhiteSpace(newParticipant.Name))
+        if (string.IsNullOrWhiteSpace(bulkInput)) return;
+
+        var lines = bulkInput.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+        foreach (var line in lines)
         {
-            participants.Add(new Participant
+            var parts = line.Trim().Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+            if (parts.Length >= 2 && int.TryParse(parts[0], out int employeeNumber))
+            {
+                var name = string.Join(" ", parts.Skip(1));
+                if (!participants.Any(p => p.EmployeeNumber == employeeNumber))
                 {
-                    EmployeeNumber = newParticipant.EmployeeNumber,
-                    Name = newParticipant.Name
-                });
-            newParticipant = new Participant();
-            StateHasChanged();
+                    participants.Add(new Participant
+                        {
+                            EmployeeNumber = employeeNumber,
+                            Name = name,
+                            HasWon = false
+                        });
+                }
+            }
         }
+        bulkInput = "";
+        StateHasChanged();
     }
 
     private void RemoveParticipant(Participant participant)
     {
-        Console.WriteLine("RemoveParticipant called");
         participants.Remove(participant);
         StateHasChanged();
     }
 
+    private void ClearAllParticipants()
+    {
+        if (participants.Any())
+        {
+            participants.Clear();
+            winningHistory.Clear();
+            StateHasChanged();
+        }
+    }
+
     private async Task StartLottery()
     {
-        Console.WriteLine("StartLottery called");
-        if (participants.Count == 0) return;
+        if (!participants.Any(p => !p.HasWon)) return;
 
-        winner = null;
         isAnimating = true;
+        showWinner = false;
         StateHasChanged();
 
-        var tempRandom = new Random();
-        for (int i = 0; i < 20; i++)
+        var eligibleParticipants = participants.Where(p => !p.HasWon).ToList();
+        var random = new Random();
+
+        // 高速アニメーション
+        for (int i = 0; i < 15; i++)
         {
-            currentNumber = participants[tempRandom.Next(participants.Count)].EmployeeNumber;
+            currentNumber = eligibleParticipants[random.Next(eligibleParticipants.Count)].EmployeeNumber;
             StateHasChanged();
             await Task.Delay(100);
         }
 
-        winner = LotteryService.SelectWinner(participants);
+        // 最後の3回のスローモーション
+        for (int i = 0; i < 3; i++)
+        {
+            currentNumber = eligibleParticipants[random.Next(eligibleParticipants.Count)].EmployeeNumber;
+            StateHasChanged();
+            await Task.Delay(800);
+        }
+
+        // 当選者の決定と表示
+        var winner = LotteryService.SelectWinner(eligibleParticipants);
         currentNumber = winner.EmployeeNumber;
-        isAnimating = false;
+        var winningParticipant = participants.First(p => p.EmployeeNumber == winner.EmployeeNumber);
+        winningParticipant.HasWon = true;
+        winningHistory.Add(winningParticipant);
+        currentWinner = winningParticipant;
+
+        await Task.Delay(1000);
+        showWinner = true;
         StateHasChanged();
     }
 
-    private void TestClick()
+    private void CloseAnimation()
     {
-        Console.WriteLine("Button clicked");
+        isAnimating = false;
+        showWinner = false;
+        StateHasChanged();
+    }
+
+    private void ResetLottery()
+    {
+        foreach (var participant in participants)
+        {
+            participant.HasWon = false;
+        }
+        winningHistory.Clear();
+        StateHasChanged();
     }
 }

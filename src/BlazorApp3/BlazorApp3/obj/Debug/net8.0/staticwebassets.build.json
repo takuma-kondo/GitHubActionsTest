@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "om0Hd2GvQ94MB/ZsWBw4THR4Xn2kFmH5JsSH0W6zHLI=",
+  "Hash": "ols5sTzYlFTE1HazSIs6tXh1H2VdZr1dh9S04YdOxlg=",
   "Source": "BlazorApp3",
   "BasePath": "_content/BlazorApp3",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "BlazorApp3\\wwwroot",
       "Source": "BlazorApp3",
-      "ContentRoot": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\",
+      "ContentRoot": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\",
       "BasePath": "_content/BlazorApp3",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorApp3.styles.css",
+      "Identity": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorApp3.styles.css",
       "SourceId": "BlazorApp3",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/BlazorApp3",
       "RelativePath": "BlazorApp3#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "F7/z06gUgv1WaR36r3/PNS/xEgMHD5y6M2PUJbSyEhE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorApp3.styles.css"
+      "OriginalItemSpec": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorApp3.styles.css"
     },
     {
-      "Identity": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp3.bundle.scp.css",
+      "Identity": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp3.bundle.scp.css",
       "SourceId": "BlazorApp3",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/BlazorApp3",
       "RelativePath": "BlazorApp3#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "F7/z06gUgv1WaR36r3/PNS/xEgMHD5y6M2PUJbSyEhE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp3.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp3.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\app.css",
+      "Identity": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\app.css",
       "SourceId": "BlazorApp3",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\",
+      "ContentRoot": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\",
       "BasePath": "_content/BlazorApp3",
       "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "BlazorApp3",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\",
+      "ContentRoot": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\",
       "BasePath": "_content/BlazorApp3",
       "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "BlazorApp3",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\",
+      "ContentRoot": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\",
       "BasePath": "_content/BlazorApp3",
       "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\favicon.png",
+      "Identity": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\favicon.png",
       "SourceId": "BlazorApp3",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\",
+      "ContentRoot": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\",
       "BasePath": "_content/BlazorApp3",
       "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\site.css",
+      "Identity": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\site.css",
       "SourceId": "BlazorApp3",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\",
+      "ContentRoot": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\",
       "BasePath": "_content/BlazorApp3",
       "RelativePath": "site#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -167,7 +167,7 @@
   "Endpoints": [
     {
       "Route": "app.css",
-      "AssetFile": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\app.css",
+      "AssetFile": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -204,7 +204,7 @@
     },
     {
       "Route": "app.da95v2qkru.css",
-      "AssetFile": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\app.css",
+      "AssetFile": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -249,7 +249,7 @@
     },
     {
       "Route": "BlazorApp3.bundle.scp.css",
-      "AssetFile": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp3.bundle.scp.css",
+      "AssetFile": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp3.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -286,7 +286,7 @@
     },
     {
       "Route": "BlazorApp3.styles.css",
-      "AssetFile": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorApp3.styles.css",
+      "AssetFile": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorApp3.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -323,7 +323,7 @@
     },
     {
       "Route": "BlazorApp3.zxx9rg7ghs.bundle.scp.css",
-      "AssetFile": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp3.bundle.scp.css",
+      "AssetFile": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BlazorApp3.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -368,7 +368,7 @@
     },
     {
       "Route": "BlazorApp3.zxx9rg7ghs.styles.css",
-      "AssetFile": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorApp3.styles.css",
+      "AssetFile": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorApp3.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -413,7 +413,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.bpk8xqwxhs.css",
-      "AssetFile": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -458,7 +458,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css",
-      "AssetFile": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -495,7 +495,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -540,7 +540,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.map",
-      "AssetFile": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -577,7 +577,7 @@
     },
     {
       "Route": "favicon.ifv42okdf2.png",
-      "AssetFile": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\favicon.png",
+      "AssetFile": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -622,7 +622,7 @@
     },
     {
       "Route": "favicon.png",
-      "AssetFile": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\favicon.png",
+      "AssetFile": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -659,7 +659,7 @@
     },
     {
       "Route": "site.css",
-      "AssetFile": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\site.css",
+      "AssetFile": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -696,7 +696,7 @@
     },
     {
       "Route": "site.vwqpxbgk8q.css",
-      "AssetFile": "C:\\Users\\10042000563\\source\\repos\\BlazorApp3\\BlazorApp3\\wwwroot\\site.css",
+      "AssetFile": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
