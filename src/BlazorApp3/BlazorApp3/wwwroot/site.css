@@ -1,0 +1,27 @@
+﻿.lottery-animation {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.lottery-ball {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    border-radius: 50%;
+    line-height: 100px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-20px);
+    }
+}

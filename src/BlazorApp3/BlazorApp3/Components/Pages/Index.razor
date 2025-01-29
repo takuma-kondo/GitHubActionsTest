@@ -1,0 +1,174 @@
+﻿@page "/"
+@using BlazorApp3.Components.Models
+@using BlazorApp3.Components.Services
+@using BlazorApp3.Components.Models
+@inject ILotteryService LotteryService
+
+<h1>抽選アプリ</h1>
+
+<button class="btn btn-primary" @onclick="TestClick">追加</button>
+
+<div class="container">
+    <!-- 参加者登録フォーム -->
+    <div class="form-group mb-4">
+        <h4>参加者登録</h4>
+        <div class="input-group">
+            <input type="number" @bind="newParticipant.EmployeeNumber" @bind:event="oninput" class="form-control" placeholder="職番" />
+            <input type="text" @bind="newParticipant.Name" @bind:event="oninput" class="form-control" placeholder="名前" />
+            <button type="button" class="btn btn-primary" @onclick="AddParticipant">追加</button>
+        </div>
+    </div>
+
+    <!-- 参加者リスト -->
+    <div class="mb-4">
+        <h4>参加者一覧</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>職番</th>
+                    <th>名前</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var participant in participants)
+                {
+                    <tr>
+                        <td>@participant.EmployeeNumber</td>
+                        <td>@participant.Name</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm" @onclick="() => RemoveParticipant(participant)">削除</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 抽選エリア -->
+    <div class="text-center mb-4">
+        <button class="btn btn-success btn-lg" @onclick="StartLottery" disabled="@(isAnimating || participants.Count == 0)">
+            抽選開始
+        </button>
+    </div>
+
+    <!-- 抽選アニメーション -->
+    @if (isAnimating)
+    {
+        <div class="lottery-animation">
+            <div class="lottery-ball">@currentNumber</div>
+        </div>
+    }
+
+    <!-- 当選結果 -->
+    @if (winner != null)
+    {
+        <div class="result-area text-center">
+            <h4>当選結果</h4>
+            <p class="h5">当選番号: @winner.EmployeeNumber</p>
+            <p class="h5">当選者: @winner.Name</p>
+        </div>
+    }
+</div>
+
+<style>
+    .lottery-animation {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .lottery-ball {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+        border-radius: 50%;
+        line-height: 100px;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        animation: bounce 0.5s infinite alternate;
+    }
+
+    @@keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .result-area {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+    }
+</style>
+
+@code {
+    private List<Participant> participants = new List<Participant>();
+    private Participant newParticipant = new Participant();
+    private Participant winner;
+    private bool isAnimating;
+    private int currentNumber;
+
+    // protected override void OnInitialized()
+    // {
+    //     participants = new List<Participant>();
+    //     newParticipant = new Participant();
+    //     base.OnInitialized();
+    // }
+
+    private void AddParticipant()
+    {
+        Console.WriteLine("AddParticipant called");
+        if (newParticipant.EmployeeNumber != 0 && !string.IsNullOrWhiteSpace(newParticipant.Name))
+        {
+            participants.Add(new Participant
+                {
+                    EmployeeNumber = newParticipant.EmployeeNumber,
+                    Name = newParticipant.Name
+                });
+            newParticipant = new Participant();
+            StateHasChanged();
+        }
+    }
+
+    private void RemoveParticipant(Participant participant)
+    {
+        Console.WriteLine("RemoveParticipant called");
+        participants.Remove(participant);
+        StateHasChanged();
+    }
+
+    private async Task StartLottery()
+    {
+        Console.WriteLine("StartLottery called");
+        if (participants.Count == 0) return;
+
+        winner = null;
+        isAnimating = true;
+        StateHasChanged();
+
+        var tempRandom = new Random();
+        for (int i = 0; i < 20; i++)
+        {
+            currentNumber = participants[tempRandom.Next(participants.Count)].EmployeeNumber;
+            StateHasChanged();
+            await Task.Delay(100);
+        }
+
+        winner = LotteryService.SelectWinner(participants);
+        currentNumber = winner.EmployeeNumber;
+        isAnimating = false;
+        StateHasChanged();
+    }
+
+    private void TestClick()
+    {
+        Console.WriteLine("Button clicked");
+    }
+}
