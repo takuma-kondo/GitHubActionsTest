@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\images\\newyear-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\newyear-bg.jpg"
+    },
+    {
       "Id": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\site.css",
       "PackagePath": "staticwebassets\\site.css"
     },

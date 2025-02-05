@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ols5sTzYlFTE1HazSIs6tXh1H2VdZr1dh9S04YdOxlg=",
+  "Hash": "R3cVRk6P/pUAWH/+JAScLDUyPnwrVGctz250wvdJ0ys=",
   "Source": "BlazorApp3",
   "BasePath": "_content/BlazorApp3",
   "Mode": "Default",
@@ -141,6 +141,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\images\\newyear-bg.jpg",
+      "SourceId": "BlazorApp3",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\",
+      "BasePath": "_content/BlazorApp3",
+      "RelativePath": "images/newyear-bg#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "z9l2e0azla",
+      "Integrity": "yflwcgHteQuTOtIhljCEnUiAgYSilVtdvmGF/z2+vao=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\newyear-bg.jpg"
     },
     {
       "Identity": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\site.css",
@@ -654,6 +675,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "images/newyear-bg.jpg",
+      "AssetFile": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\images\\newyear-bg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "178921"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yflwcgHteQuTOtIhljCEnUiAgYSilVtdvmGF/z2+vao=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:21:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yflwcgHteQuTOtIhljCEnUiAgYSilVtdvmGF/z2+vao="
+        }
+      ]
+    },
+    {
+      "Route": "images/newyear-bg.z9l2e0azla.jpg",
+      "AssetFile": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\images\\newyear-bg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "178921"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yflwcgHteQuTOtIhljCEnUiAgYSilVtdvmGF/z2+vao=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:21:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "z9l2e0azla"
+        },
+        {
+          "Name": "label",
+          "Value": "images/newyear-bg.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yflwcgHteQuTOtIhljCEnUiAgYSilVtdvmGF/z2+vao="
         }
       ]
     },

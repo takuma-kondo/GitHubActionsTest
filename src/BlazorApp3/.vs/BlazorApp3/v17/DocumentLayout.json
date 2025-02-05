@@ -88,7 +88,7 @@
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\Pages\\Index.razor",
               "ToolTip": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Pages\\Index.razor",
               "RelativeToolTip": "BlazorApp3\\Components\\Pages\\Index.razor",
-              "ViewState": "AgIAAAsBAAAAAAAAAAAowBwBAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAowLUAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-29T07:36:27.319Z",
               "EditorCaption": ""
@@ -101,7 +101,7 @@
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\App.razor",
               "ToolTip": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\App.razor",
               "RelativeToolTip": "BlazorApp3\\Components\\App.razor",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-29T07:12:25.654Z",
               "EditorCaption": ""
@@ -116,8 +116,7 @@
               "RelativeToolTip": "BlazorApp3\\Components\\Models\\Participaint.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T07:35:29.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T07:35:29.598Z"
             },
             {
               "$type": "Document",
@@ -129,8 +128,7 @@
               "RelativeToolTip": "BlazorApp3\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T07:14:17.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T07:14:17.624Z"
             },
             {
               "$type": "Document",
