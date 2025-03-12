@@ -1,0 +1,132 @@
+﻿@page "/lottery"
+@using BlazorApp3.Components.Models
+@using BlazorApp3.Components.Services
+@inject ILotteryService LotteryService
+
+<div class="container">
+    <div class="row">
+        <!-- ライブ抽選表示エリア -->
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4>現在の抽選状況</h4>
+                </div>
+                <div class="card-body">
+                    @if (!isLotteryActive)
+                    {
+                        <div class="text-center py-5">
+                            <h5>抽選準備中です</h5>
+                            <p class="text-muted">しばらくお待ちください</p>
+                        </div>
+                    }
+                    else
+                    {
+                        @if (isAnimating)
+                        {
+                            <div class="lottery-animation">
+                                <div class="lottery-ball">@currentNumber</div>
+                            </div>
+                        }
+
+                        @if (currentWinner != null)
+                        {
+                            <div class="result-area text-center">
+                                <h4>当選結果</h4>
+                                <p class="h5">当選番号: @currentWinner.EmployeeNumber</p>
+                                <p class="h5">当選者: @currentWinner.Name</p>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- 当選履歴エリア -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4>当選履歴</h4>
+                </div>
+                <div class="card-body">
+                    @if (!winners.Any())
+                    {
+                        <p class="text-muted">まだ当選者はいません</p>
+                    }
+                    else
+                    {
+                        <div class="list-group">
+                            @foreach (var winner in winners)
+                            {
+                                <div class="list-group-item">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-0">@winner.Name</h6>
+                                            <small class="text-muted">社員番号: @winner.EmployeeNumber</small>
+                                        </div>
+                                        <small class="text-muted">@winner.WinningTime.ToString("MM/dd HH:mm")</small>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .lottery-animation {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .lottery-ball {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+        border-radius: 50%;
+        line-height: 100px;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        animation: bounce 0.5s infinite alternate;
+    }
+
+    @@keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .result-area {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+    }
+</style>
+
+@code {
+    private bool isLotteryActive = false;
+    private bool isAnimating = false;
+    private int currentNumber;
+    private Participant currentWinner;
+    private List<WinnerRecord> winners = new();
+
+    protected override void OnInitialized()
+    {
+        // TODO: 実際のデータ取得ロジックを実装
+        // 仮のデータを表示
+        winners = new List<WinnerRecord>
+        {
+            new WinnerRecord { EmployeeNumber = 1001, Name = "山田太郎", WinningTime = DateTime.Now.AddHours(-1) },
+            new WinnerRecord { EmployeeNumber = 1002, Name = "鈴木花子", WinningTime = DateTime.Now.AddHours(-2) }
+        };
+    }
+}

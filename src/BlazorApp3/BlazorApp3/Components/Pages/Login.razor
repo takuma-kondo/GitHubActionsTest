@@ -1,0 +1,60 @@
+﻿@page "/login"
+@using BlazorApp3.Components.Models
+@inject NavigationManager NavigationManager
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">抽選アプリログイン</h3>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-danger @(loginError ? "d-block" : "d-none")" role="alert">
+                        社員番号または名前が正しくありません。
+                    </div>
+                    <form @onsubmit="HandleLogin">
+                        <div class="mb-3">
+                            <label for="employeeNumber" class="form-label">社員番号</label>
+                            <input type="number"
+                                   class="form-control"
+                                   id="employeeNumber"
+                                   @bind="loginModel.EmployeeNumber"
+                                   required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">名前</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="name"
+                                   @bind="loginModel.Name"
+                                   required />
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">ログイン</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private LoginModel loginModel = new();
+    private bool loginError = false;
+
+    private void HandleLogin()
+    {
+        // TODO: 実際の認証ロジックを実装
+        // 仮の実装として、入力があれば通す
+        if (!string.IsNullOrWhiteSpace(loginModel.Name) && loginModel.EmployeeNumber != 0)
+        {
+            NavigationManager.NavigateTo("/lottery");
+        }
+        else
+        {
+            loginError = true;
+        }
+    }
+}
