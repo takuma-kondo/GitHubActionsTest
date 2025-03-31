@@ -1,6 +1,8 @@
 ﻿@page "/login"
 @using BlazorApp3.Components.Models
+@using BlazorApp3.Components.Services
 @inject NavigationManager NavigationManager
+@inject IParticipantService ParticipantService
 
 <div class="container">
     <div class="row justify-content-center mt-5">
@@ -40,15 +42,22 @@
     </div>
 </div>
 
+
+<!-- ホームに戻るボタン -->
+<div class="position-fixed bottom-0 start-0 p-4">
+    <a href="/" class="btn btn-secondary">
+        ホームに戻る
+    </a>
+</div>
+
 @code {
     private LoginModel loginModel = new();
     private bool loginError = false;
 
     private void HandleLogin()
     {
-        // TODO: 実際の認証ロジックを実装
-        // 仮の実装として、入力があれば通す
-        if (!string.IsNullOrWhiteSpace(loginModel.Name) && loginModel.EmployeeNumber != 0)
+    // 参加者リストに存在するかチェック
+        if (ParticipantService.IsValidParticipant(loginModel.EmployeeNumber, loginModel.Name))
         {
             NavigationManager.NavigateTo("/lottery");
         }
