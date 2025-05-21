@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<ILotteryService, LotteryService>();
+builder.Services.AddSingleton<IParticipantService, ParticipantService>();
 
 
 // Add services to the container.

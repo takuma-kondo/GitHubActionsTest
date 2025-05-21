@@ -11,32 +11,60 @@
       "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\pages\\lottery.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\pages\\lottery.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\services\\impl\\participantservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\services\\impl\\participantservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\services\\iparticipantservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\services\\iparticipantservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\services\\ilotteryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\services\\ilotteryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,20 +79,8 @@
       "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\models\\participaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\services\\impl\\lotteryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\services\\impl\\lotteryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\components\\services\\ilotteryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|solutionrelative:blazorapp3\\components\\services\\ilotteryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B697CC9F-1F47-43DD-82B5-D9AFD6506CA6}|BlazorApp3\\BlazorApp3.csproj|c:\\git\\githubactionstest\\src\\blazorapp3\\blazorapp3\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -86,11 +102,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 2175,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "IParticipantService.cs",
+              "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Services\\IParticipantService.cs",
+              "RelativeDocumentMoniker": "BlazorApp3\\Components\\Services\\IParticipantService.cs",
+              "ToolTip": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Services\\IParticipantService.cs",
+              "RelativeToolTip": "BlazorApp3\\Components\\Services\\IParticipantService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T08:37:16.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ParticipantService.cs",
+              "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Services\\Impl\\ParticipantService.cs",
+              "RelativeDocumentMoniker": "BlazorApp3\\Components\\Services\\Impl\\ParticipantService.cs",
+              "ToolTip": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Services\\Impl\\ParticipantService.cs",
+              "RelativeToolTip": "BlazorApp3\\Components\\Services\\Impl\\ParticipantService.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAgwAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T08:33:52.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "NavMenu.razor.css",
+              "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeDocumentMoniker": "BlazorApp3\\Components\\Layout\\NavMenu.razor.css",
+              "ToolTip": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeToolTip": "BlazorApp3\\Components\\Layout\\NavMenu.razor.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-12T08:42:01.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "BlazorApp3\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "BlazorApp3\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T08:36:23.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Counter.razor",
               "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Pages\\Counter.razor",
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\Pages\\Counter.razor",
@@ -102,19 +166,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "Error.razor",
               "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Pages\\Error.razor",
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\Pages\\Error.razor",
               "ToolTip": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Pages\\Error.razor",
               "RelativeToolTip": "BlazorApp3\\Components\\Pages\\Error.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-05T08:36:04.8Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "WinnerRecord.cs",
               "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Models\\WinnerRecord.cs",
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\Models\\WinnerRecord.cs",
@@ -132,7 +196,7 @@
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\Pages\\Login.razor",
               "ToolTip": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Pages\\Login.razor",
               "RelativeToolTip": "BlazorApp3\\Components\\Pages\\Login.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-26T08:28:48.81Z"
             },
@@ -144,7 +208,7 @@
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\Pages\\Index.razor",
               "ToolTip": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Pages\\Index.razor",
               "RelativeToolTip": "BlazorApp3\\Components\\Pages\\Index.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMoBAAAAAAAAAAAiwNsBAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-29T07:36:27.319Z",
               "EditorCaption": ""
@@ -157,14 +221,14 @@
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\App.razor",
               "ToolTip": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\App.razor",
               "RelativeToolTip": "BlazorApp3\\Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-29T07:12:25.654Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "Participaint.cs",
               "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Models\\Participaint.cs",
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\Models\\Participaint.cs",
@@ -176,32 +240,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\Layout\\NavMenu.razor",
               "ToolTip": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Layout\\NavMenu.razor",
               "RelativeToolTip": "BlazorApp3\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-29T07:34:15.17Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T07:34:15.17Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\Layout\\MainLayout.razor",
               "ToolTip": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Layout\\MainLayout.razor",
               "RelativeToolTip": "BlazorApp3\\Components\\Layout\\MainLayout.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-29T07:33:50.756Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Weather.razor",
               "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Pages\\Weather.razor",
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\Pages\\Weather.razor",
@@ -213,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Models\\LoginModel.cs",
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\Models\\LoginModel.cs",
@@ -231,25 +294,25 @@
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\Pages\\Lottery.razor",
               "ToolTip": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Pages\\Lottery.razor",
               "RelativeToolTip": "BlazorApp3\\Components\\Pages\\Lottery.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAFEAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-26T08:50:15.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Program.cs",
               "RelativeDocumentMoniker": "BlazorApp3\\Program.cs",
               "ToolTip": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Program.cs",
               "RelativeToolTip": "BlazorApp3\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-29T07:14:17.624Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 8,
               "Title": "ILotteryService.cs",
               "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Services\\ILotteryService.cs",
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\Services\\ILotteryService.cs",
@@ -261,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "LotteryService.cs",
               "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Services\\Impl\\LotteryService.cs",
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\Services\\Impl\\LotteryService.cs",
@@ -273,19 +336,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 2,
               "Title": "Routes.razor",
               "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Routes.razor",
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\Routes.razor",
               "ToolTip": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\Routes.razor",
               "RelativeToolTip": "BlazorApp3\\Components\\Routes.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-26T08:52:08.351Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "app.css",
               "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\app.css",
               "RelativeDocumentMoniker": "BlazorApp3\\wwwroot\\app.css",
@@ -297,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\wwwroot\\site.css",
               "RelativeDocumentMoniker": "BlazorApp3\\wwwroot\\site.css",
@@ -309,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\Git\\GitHubActionsTest\\src\\BlazorApp3\\BlazorApp3\\Components\\_Imports.razor",
               "RelativeDocumentMoniker": "BlazorApp3\\Components\\_Imports.razor",

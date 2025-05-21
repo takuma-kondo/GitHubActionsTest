@@ -1,7 +1,8 @@
-﻿@page "/"
+﻿@page "/index"
 @using BlazorApp3.Components.Models
 @using BlazorApp3.Components.Services
 @inject ILotteryService LotteryService
+@inject IParticipantService ParticipantService
 @inject IJSRuntime JSRuntime
 
 <h1>抽選アプリ</h1>
@@ -83,6 +84,13 @@
             </tbody>
         </table>
     </div>
+</div>
+
+<!-- ホームに戻るボタン -->
+<div class="position-fixed bottom-0 start-0 p-4">
+    <a href="/" class="btn btn-secondary">
+        ホームに戻る
+    </a>
 </div>
 
 <!-- 抽選アニメーションオーバーレイ -->
@@ -342,8 +350,10 @@
 
     }
 
-    @("keyframes numberSwitch")" {
-        0%
+    @("keyframes numberSwitch")
+
+    " {
+    0%
 
     0% {
         transform: scale(1);
@@ -390,11 +400,20 @@
     private string bulkInput = "";
     private Participant currentWinner;
 
+    protected override void OnInitialized()
+    {
+        // 初期化時にサービスから参加者を取得
+        participants = ParticipantService.GetParticipants();
+        winningHistory = ParticipantService.GetWinners();
+    }
+
     private void AddBulkParticipants()
     {
         if (string.IsNullOrWhiteSpace(bulkInput)) return;
 
         var lines = bulkInput.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+        var newParticipants = new List<Participant>();
+
         foreach (var line in lines)
         {
             var parts = line.Trim().Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
@@ -403,22 +422,27 @@
                 var name = string.Join(" ", parts.Skip(1));
                 if (!participants.Any(p => p.EmployeeNumber == employeeNumber))
                 {
-                    participants.Add(new Participant
+                    var participant = new Participant
                         {
                             EmployeeNumber = employeeNumber,
                             Name = name,
                             HasWon = false
-                        });
+                        };
+                    newParticipants.Add(participant);
                 }
             }
         }
+
+        ParticipantService.AddParticipants(newParticipants);
+        participants = ParticipantService.GetParticipants();
         bulkInput = "";
         StateHasChanged();
     }
 
     private void RemoveParticipant(Participant participant)
     {
-        participants.Remove(participant);
+        ParticipantService.RemoveParticipant(participant);
+        participants = ParticipantService.GetParticipants();
         StateHasChanged();
     }
 
@@ -426,8 +450,9 @@
     {
         if (participants.Any())
         {
-            participants.Clear();
-            winningHistory.Clear();
+            ParticipantService.ClearParticipants();
+            participants = ParticipantService.GetParticipants();
+            winningHistory = ParticipantService.GetWinners();
             StateHasChanged();
         }
     }
@@ -448,7 +473,7 @@
         {
             currentNumber = eligibleParticipants[random.Next(eligibleParticipants.Count)].EmployeeNumber;
             StateHasChanged();
-            await Task.Delay(100);
+            await Task.Delay(200);
         }
 
         // 最後の3回のスローモーション
@@ -462,10 +487,13 @@
         // 当選者の決定と表示
         var winner = LotteryService.SelectWinner(eligibleParticipants);
         currentNumber = winner.EmployeeNumber;
-        var winningParticipant = participants.First(p => p.EmployeeNumber == winner.EmployeeNumber);
-        winningParticipant.HasWon = true;
-        winningHistory.Add(winningParticipant);
-        currentWinner = winningParticipant;
+        ParticipantService.MarkAsWinner(winner);
+
+        // サービスから最新データを取得
+        participants = ParticipantService.GetParticipants();
+        winningHistory = ParticipantService.GetWinners();
+
+        currentWinner = participants.First(p => p.EmployeeNumber == winner.EmployeeNumber);
 
         await Task.Delay(1000);
         showWinner = true;
@@ -481,11 +509,9 @@
 
     private void ResetLottery()
     {
-        foreach (var participant in participants)
-        {
-            participant.HasWon = false;
-        }
-        winningHistory.Clear();
+        ParticipantService.ResetWinningStatus();
+        participants = ParticipantService.GetParticipants();
+        winningHistory = ParticipantService.GetWinners();
         StateHasChanged();
     }
 }
